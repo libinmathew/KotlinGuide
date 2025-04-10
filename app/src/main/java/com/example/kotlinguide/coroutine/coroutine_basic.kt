@@ -9,7 +9,7 @@ import kotlinx.coroutines.runBlocking
   *
   * Coroutines follow a principle of structured concurrency which means that new coroutines can only be launched in a specific CoroutineScope,which delimits the lifetime of the coroutine.
   *
-  * On Android, coroutines help to manage long-running tasks that might otherwise block the main thread and cause your app to become unresponsive.
+  * On Android, coroutines help to manage long-running tasks that might otherwise block the com.example.kotlinguide.main thread and cause your app to become unresponsive.
 
   *
   *

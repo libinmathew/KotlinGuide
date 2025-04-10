@@ -1,5 +1,6 @@
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.yield
@@ -15,7 +16,7 @@ import kotlinx.coroutines.yield
  * **/
 
 /*
-fun main(args: Array<String>) = runBlocking {
+fun com.example.kotlinguide.main(args: Array<String>) = runBlocking {
     val startTime = System.currentTimeMillis()
     val job = launch(Dispatchers.Default) {
         var nextPrintTime = startTime
@@ -44,7 +45,7 @@ fun main(args: Array<String>) = runBlocking {
 
 
 /** By default  if any exception or cancellation happen in the parent coroutine, wait for the child to finish, if immediately wants stop the child we need to check isActive or call ensureActive() */
-/*fun main(args: Array<String>) = runBlocking {
+fun main(args: Array<String>) = runBlocking {
     val startTime = System.currentTimeMillis()
     val job = launch(Dispatchers.Default) {
         var nextPrintTime = startTime
@@ -60,6 +61,7 @@ fun main(args: Array<String>) = runBlocking {
         }
         launch {
             while (i <= 7) {
+                dd()
                 if (System.currentTimeMillis() >= nextPrintTime) {
                     println("Hello 2 ${i++}")
                     nextPrintTime += 500L
@@ -77,17 +79,18 @@ fun main(args: Array<String>) = runBlocking {
     println("Cancel!")
   //  job.cancel()
     println("Done!")
-}*/
+}
 
 
 /** yield also check the whether coroutine completed or cancelled*/
 suspend fun  dd (){
-    yield()
+  //  yield()
 }
 
 /**Above code is rewritten such that isActive checking removed. Delay function add. Now it works as expected child coroutine cancels its child immediately when exception occurs or on cancel()  call. */
 
-fun main(args: Array<String>) = runBlocking {
+/*
+fun com.example.kotlinguide.main(args: Array<String>) = runBlocking {
 
     val job = launch(Dispatchers.Default) {
         var i = 0
@@ -116,4 +119,4 @@ fun main(args: Array<String>) = runBlocking {
     println("Cancel!")
     //  job.cancel()
     println("Done!")
-}
+}*/

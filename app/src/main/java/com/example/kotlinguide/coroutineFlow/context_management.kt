@@ -8,7 +8,7 @@ import kotlinx.coroutines.runBlocking
 /**Flows can be executed in different coroutine contexts.
   flowOn: Changes the context in which the flow emits values.
  *
- * here flow emit the value in worker thread(IO).Values are collected in main thread.
+ * here flow emit the value in worker thread(IO).Values are collected in com.example.kotlinguide.main thread.
  */
 fun main() = runBlocking{
     flow {

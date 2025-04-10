@@ -19,7 +19,7 @@ fun main() = runBlocking {
     }
 
     val supervisorJob = SupervisorJob()
-    val scope = CoroutineScope(coroutineContext + Job() + exceptionHandler)
+    val scope = CoroutineScope(coroutineContext + supervisorJob + exceptionHandler)
 
     val job1 = scope.launch { updateUIPart1() }
     val job2 = scope.launch { updateUIPart2() }

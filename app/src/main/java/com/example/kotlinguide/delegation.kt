@@ -3,17 +3,15 @@
 
  *Kotlin provides built-in support for delegation by using the by keyword.
  *
- *There are two main types of delegation in Kotlin: class delegation and property delegation.*/
+ *There are two com.example.kotlinguide.main types of delegation in Kotlin: class delegation and property delegation.*/
 
 fun main() {
     println("Hai")
     println(name) // name initialized
-
     val summerHolyDayPlans = HolidayPlans(Summer())
     val winterHolyDayPlans = HolidayPlans(Winter())
-
-    println( summerHolyDayPlans.currentWeather())
-    println( winterHolyDayPlans.currentWeather())
+    println(summerHolyDayPlans.currentWeather())
+    println(winterHolyDayPlans.currentWeather())
 }
 
 /**The lazy delegate initialises a property only when it is first accessed. This is useful for expensive object initialisation or properties that are only needed during program execution. It optimises resource usage and can improve application performance. By default, lazy initialisation is thread-safe.*/

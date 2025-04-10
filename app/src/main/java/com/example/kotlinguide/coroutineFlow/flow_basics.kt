@@ -16,7 +16,7 @@ import kotlinx.coroutines.runBlocking
 
 
 /**
- * Coroutines: Coroutines are a way to write concurrent code in a sequential manner. They are lightweight threads that can be suspended and resumed, allowing you to perform asynchronous operations without blocking the main thread.
+ * Coroutines: Coroutines are a way to write concurrent code in a sequential manner. They are lightweight threads that can be suspended and resumed, allowing you to perform asynchronous operations without blocking the com.example.kotlinguide.main thread.
  *
  * Flows: Flows are a type that can emit multiple values sequentially, asynchronously. They are designed to handle streams of data over time, such as database updates, network responses, or UI events. How Flows Use Coroutines*/
 fun main() = runBlocking {

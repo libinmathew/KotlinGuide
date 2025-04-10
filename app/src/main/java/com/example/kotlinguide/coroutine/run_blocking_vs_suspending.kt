@@ -14,7 +14,7 @@ import kotlinx.coroutines.withContext
  */
 /*//Suspending
 @OptIn(ExperimentalCoroutinesApi::class, DelicateCoroutinesApi::class)
-fun main() = runBlocking {
+fun com.example.kotlinguide.main() = runBlocking {
     println("Start of runBlocking")
 
     val dispatcher = newSingleThreadContext("MyThread")

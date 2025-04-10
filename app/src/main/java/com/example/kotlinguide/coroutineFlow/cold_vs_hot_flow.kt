@@ -29,7 +29,7 @@ import kotlinx.coroutines.runBlocking
  *
  * */
 /*
-fun main() = runBlocking {
+fun com.example.kotlinguide.main() = runBlocking {
     val coldFlow = flow {
         println("Flow producer started")
         for (i in 1..3) {
@@ -62,7 +62,7 @@ fun main() = runBlocking {
 */
 
 /*
-fun main() = runBlocking {
+fun com.example.kotlinguide.main() = runBlocking {
     val stateFlow = MutableStateFlow(0)
 
     // Update the state

@@ -18,7 +18,7 @@ It suspends the current coroutine (the runBlocking coroutine) until all coroutin
  * Reference : [scope-docs](https://medium.com/androiddevelopers/coroutines-first-things-first-e6187bf3bb21)
  */
 
-/*fun main() = runBlocking {
+/*fun com.example.kotlinguide.main() = runBlocking {
     coroutineScope { // this: CoroutineScope
         launch {
             delay(2000L)

@@ -33,7 +33,7 @@ fun main() = runBlocking {
 
 //https://medium.com/androiddevelopers/coroutines-first-things-first-e6187bf3bb21
 /*
-fun main() = runBlocking {
+fun com.example.kotlinguide.main() = runBlocking {
     val scope = CoroutineScope(Job())
 
     println("Scope created")
